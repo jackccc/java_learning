@@ -9,9 +9,8 @@ public class Task0911_0917 {
         Random rand = new Random();
 
         // 使用Java并行ForEach生成数组，样本为1000的情况下慢于普通的for循环
-        IntStream.range(0, 999).parallel().forEach(i -> {
-                    int seed = rand.nextInt(1000);
-                    container[i] = seed;
+        IntStream.range(0, 1000).parallel().forEach(i -> {
+                    container[i] = i * 2;
                 }
         );
         return container;
