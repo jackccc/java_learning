@@ -26,7 +26,7 @@ public class GetArrayController {
 
         long endTime = System.nanoTime();
         result.setEndTime(endTime);
-        result.timeCost = "执行耗时" + ((result.getEndTime() - result.getStartTime()) ) + "毫秒";
+        result.timeCost = "执行耗时" + ((result.getEndTime() - result.getStartTime()) / 1e6) + "毫秒";
         return result;
     }
 }
