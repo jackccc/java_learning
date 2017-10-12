@@ -1,11 +1,11 @@
 public enum  EnumSingletonCreator {
     INSTANCE;
-    private CarService instance;
+    private CarBuilder instance;
     EnumSingletonCreator(){
-        instance = new CarService();
+        instance = new CarBuilder();
     }
 
-    public CarService getInstance() {
+    public CarBuilder getInstance() {
         return instance;
     }
 }
