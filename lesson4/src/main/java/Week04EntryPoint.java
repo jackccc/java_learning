@@ -9,7 +9,7 @@ public class Week04EntryPoint {
      */
     private static void GetInstanceFromEnumSingleton()
     {
-        EnumSingletonCreator.INSTANCE.getInstance().GetCars();
+        EnumSingletonCreator.INSTANCE.getInstance().GetCars("001", "凯迪拉克",";client:枚举单例");
     }
 
     /**
@@ -17,7 +17,8 @@ public class Week04EntryPoint {
      */
     private static void GetInstanceWithDoubleCheckLocking()
     {
-        DoubleCheckLockingInstanceCreator.getInstance().GetCars();
+        DoubleCheckLockingInstanceCreator client = new DoubleCheckLockingInstanceCreator();
+        client.getInstance().GetCars("002","劳斯莱斯",";client:双检锁");
     }
 
 }

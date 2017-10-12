@@ -11,4 +11,5 @@ import lombok.experimental.Builder;
 public class Car {
     String carId;
     String carName;
+    String creator;
 }
