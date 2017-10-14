@@ -1,15 +1,13 @@
 public class DoubleCheckLockingInstanceCreator {
     private  volatile CarBuilder instance = null;
     public CarBuilder getInstance(){
-            CarBuilder carService = instance;
-            if (carService == null){
+            if (instance == null){
                 synchronized (this){
-                    carService = instance;
-                    if (carService == null){
-                        instance = carService = new CarBuilder();
+                    if (instance == null){
+                        instance = new CarBuilder();
                     }
                 }
             }
-        return carService;
+        return instance;
     }
 }
