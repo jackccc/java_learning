@@ -18,7 +18,7 @@ public class Week04EntryPoint {
     private static void GetInstanceWithDoubleCheckLocking()
     {
         DoubleCheckLockingInstanceCreator client = new DoubleCheckLockingInstanceCreator();
-        client.getInstance().GetCars("002","劳斯莱斯",";client:双检锁");
+        client.getInstance().getCarBuilder().GetCars("002","劳斯莱斯",";client:双检锁");
     }
 
 }
